@@ -1,5 +1,7 @@
 import express from 'express'
 
+import cors from 'cors'
+
 import {rutasPersonalizadas} from '../Routes/rutas.js'
 
 import { conectarConMongo } from '../Database/conexion.js'
@@ -30,7 +32,9 @@ export class ServidorAPI{
     }
 
     activarBody(){
+        this.app.use(cors())
         this.app.use(express.json())//Esto es un midleuesles de express que sirve para activar la lectura de datos en diferentes formatos
     }
+
 
 }

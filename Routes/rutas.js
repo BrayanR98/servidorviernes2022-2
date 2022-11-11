@@ -1,5 +1,4 @@
 import express from 'express'
-
 import { ControladorHabitacion } from '../Controllers/ControladorHabitacion.js'
 import { ControladorReservas } from '../Controllers/ControladorReservas.js'
 let controladorHabitacion=new ControladorHabitacion() //usando el controlador
